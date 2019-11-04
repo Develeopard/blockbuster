@@ -1,0 +1,39 @@
+.periscope-section{
+    // background-color: pink;
+    margin-top: 100px;
+    width: 100%;
+    // height: 830px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .periscope-text{
+        max-width: 650px;
+        text-align: center;
+    }
+
+    .periscope{
+        // border: 2px solid red;
+        margin-top: 70px;
+        width: 600px;
+        height: 600px;
+        background: url('../images/capt-amer\ vertical.jpg');
+        background-size: 600px;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border-radius: 100%;
+
+        @media (max-width: 700px){
+            width: 400px;
+            height: 400px;
+        }
+
+        @media (max-width: 504px){
+            width: 230px;
+            height: 230px;
+        }
+    }
+
+}

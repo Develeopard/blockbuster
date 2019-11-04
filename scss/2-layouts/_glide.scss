@@ -1,0 +1,89 @@
+.glide-section{
+    // border: 2px solid red;
+    margin-top: 100px;
+    box-shadow: 0px 0px 10px $gray;
+
+    .glide__slides{
+        
+        .glide__slide{
+            height: 400px;
+            width: 100%;
+        }
+
+        .gs1{
+            background: url('../images/once upon vertical.jpg');
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs2{
+            background: url('../images/batman vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs3{
+            background: url('../images/toy story vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs4{
+            background: url('../images/rush vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs5{
+            background: url('../images/zombieland vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs6{
+            background: url('../images/warcraft vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs7{
+            background: url('../images/transformers vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs8{
+            background: url('../images/guardians vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .gs9{
+            background: url('../images/bond vertical.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media (max-width: 600px){
+        margin-top: 60px;
+
+        .glide__slide{
+            height: 320px;
+        }
+
+        .glide__arrow{
+            display: none;
+        }
+
+    }
+}

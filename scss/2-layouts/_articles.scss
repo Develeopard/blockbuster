@@ -1,0 +1,36 @@
+.articles{
+    background-color: $gray;
+    margin-top: 100px;
+    padding: 30px;
+    display: flex;
+
+    h2{
+        color: $black;
+        font-size: 2rem;
+    }
+
+    p{
+        margin-top: 15px;
+        line-height: 1.6;
+    }
+
+    .article{
+        padding: 0 20px;
+    }
+
+    @media (max-width: 800px){
+        flex-direction: column;
+
+        .article{
+            padding-top: 20px;
+
+            h2{
+                border-top: 5px solid $black;
+            }
+
+            p{
+                line-height: 1.2;
+            }
+        }
+    }
+}

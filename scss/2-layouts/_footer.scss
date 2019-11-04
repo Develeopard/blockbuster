@@ -1,0 +1,31 @@
+footer{
+    // background-color: red;
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        
+        .my-social-list{
+            display: flex;
+
+            .social-item{
+                width: 40px;
+                height: 40px;
+                margin-left: 20px;
+
+            }
+            .github{
+                background: url('../images/github.jpg') center center/cover;
+            }
+
+            .netlify{
+                background: url('../images/netlify.png') center center/cover;
+            }
+
+            .facebook{
+                background: url('../images/facebookicon.png') center center/cover;
+            }
+        }
+    }
+
+
+}

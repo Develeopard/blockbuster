@@ -1,0 +1,630 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rebeccapurple;
+}
+
+h1 {
+  font-family: "Righteous", cursive;
+}
+
+h2, h3, h4 {
+  font-family: "Staatliches", cursive;
+}
+
+p, span {
+  font-family: "Arimo", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li > a {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/hodgepodge.png");
+  background-repeat: repeat;
+  z-index: -1;
+  /* background-size: 1200px; */
+}
+
+.jammed {
+  overflow-y: hidden;
+}
+
+header {
+  background-color: whitesmoke;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 22;
+  transition: all 0.3s;
+}
+header .logo {
+  color: #090300;
+  margin-left: 200px;
+  user-select: none;
+}
+@media (max-width: 964px) {
+  header .logo {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 400px) {
+  header .logo {
+    font-size: 1.1rem;
+  }
+}
+
+.wrapper {
+  background: whitesmoke;
+  position: relative;
+  max-width: 1200px;
+  margin: 200px auto;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+.wrapper .big-logo {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 6rem;
+  user-select: none;
+}
+.wrapper .prologue {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  color: #919092;
+  font-size: 0.95rem;
+}
+@media (max-width: 720px) {
+  .wrapper .big-logo {
+    font-size: 4.2rem;
+  }
+}
+@media (max-width: 520px) {
+  .wrapper .big-logo {
+    font-size: 2.4rem;
+  }
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.slideshow .slider {
+  height: 100%;
+  width: 100%;
+}
+.slideshow .slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.slideshow .slider .slide.current {
+  opacity: 1;
+}
+.slideshow .slider .slide:first-child {
+  background: url("../images/once upon horizontal.jpg") no-repeat center center/cover;
+}
+.slideshow .slider .slide:nth-child(2) {
+  background: url("../images/batman horizontal.jpg") no-repeat center center/cover;
+}
+.slideshow .slider .slide:nth-child(3) {
+  background: url("../images/toy story horizontal.jpg") no-repeat center center/cover;
+}
+.slideshow .slider .slide:nth-child(4) {
+  background: url("../images/transformers horizontal.jpg") no-repeat center center/cover;
+}
+.slideshow .slider .slide:nth-child(5) {
+  background: url("../images/avengers horizontal.jpg") no-repeat center center/cover;
+}
+.slideshow .buttons .button {
+  background-color: transparent;
+  padding: 15px;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  transition: all 0.3s ease-in;
+}
+.slideshow .buttons .button:hover {
+  border-radius: 7px;
+}
+.slideshow .buttons #prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateX(-50%);
+}
+.slideshow .buttons #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateX(-50%);
+}
+
+.intro-text {
+  margin-top: 150px;
+  padding: 20px;
+  outline: 10px solid #919092;
+}
+.intro-text .intro-logo {
+  margin-right: 6px;
+  display: inline;
+  font-size: 1.9rem;
+}
+.intro-text .intro1, .intro-text .intro2 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  word-spacing: 5px;
+}
+.intro-text .intro1 {
+  display: inline;
+}
+.intro-text .intro2 {
+  margin-top: 10px;
+}
+@media (max-width: 720px) {
+  .intro-text {
+    margin-top: 60px;
+    outline: 3px solid #919092;
+  }
+  .intro-text .intro-logo, .intro-text .intro1, .intro-text .intro2 {
+    font-size: 1.3rem;
+    word-spacing: normal;
+  }
+}
+
+#gallery {
+  margin-top: 140px;
+  height: 600px;
+  background-color: darkblue;
+}
+
+.glide-section {
+  margin-top: 100px;
+  box-shadow: 0px 0px 10px #919092;
+}
+.glide-section .glide__slides .glide__slide {
+  height: 400px;
+  width: 100%;
+}
+.glide-section .glide__slides .gs1 {
+  background: url("../images/once upon vertical.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs2 {
+  background: url("../images/batman vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs3 {
+  background: url("../images/toy story vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs4 {
+  background: url("../images/rush vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs5 {
+  background: url("../images/zombieland vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs6 {
+  background: url("../images/warcraft vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs7 {
+  background: url("../images/transformers vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs8 {
+  background: url("../images/guardians vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.glide-section .glide__slides .gs9 {
+  background: url("../images/bond vertical.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 600px) {
+  .glide-section {
+    margin-top: 60px;
+  }
+  .glide-section .glide__slide {
+    height: 320px;
+  }
+  .glide-section .glide__arrow {
+    display: none;
+  }
+}
+
+.articles {
+  background-color: #919092;
+  margin-top: 100px;
+  padding: 30px;
+  display: flex;
+}
+.articles h2 {
+  color: #090300;
+  font-size: 2rem;
+}
+.articles p {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+.articles .article {
+  padding: 0 20px;
+}
+@media (max-width: 800px) {
+  .articles {
+    flex-direction: column;
+  }
+  .articles .article {
+    padding-top: 20px;
+  }
+  .articles .article h2 {
+    border-top: 5px solid #090300;
+  }
+  .articles .article p {
+    line-height: 1.2;
+  }
+}
+
+.periscope-section {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.periscope-section .periscope-text {
+  max-width: 650px;
+  text-align: center;
+}
+.periscope-section .periscope {
+  margin-top: 70px;
+  width: 600px;
+  height: 600px;
+  background: url("../images/capt-amer vertical.jpg");
+  background-size: 600px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 100%;
+}
+@media (max-width: 700px) {
+  .periscope-section .periscope {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 504px) {
+  .periscope-section .periscope {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.contact-form {
+  margin-top: 70px;
+}
+.contact-form .contact-form-content .contact-form-text {
+  padding: 20px 0;
+}
+.contact-form .contact-form-content .contact-form-text h2 {
+  font-size: 3rem;
+}
+.contact-form .contact-form-content .contact-form-text p {
+  max-width: 50%;
+  font-size: 0.93rem;
+  color: #919092;
+}
+
+.header-scrolled {
+  background-color: #090300;
+}
+.header-scrolled .logo {
+  color: whitesmoke;
+}
+.header-scrolled .menu a {
+  color: whitesmoke;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-content .my-social-list {
+  display: flex;
+}
+footer .footer-content .my-social-list .social-item {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+footer .footer-content .my-social-list .github {
+  background: url("../images/github.jpg") center center/cover;
+}
+footer .footer-content .my-social-list .netlify {
+  background: url("../images/netlify.png") center center/cover;
+}
+footer .footer-content .my-social-list .facebook {
+  background: url("../images/facebookicon.png") center center/cover;
+}
+
+.menu {
+  display: flex;
+  padding: 5px 20px;
+  margin-right: 200px;
+}
+.menu li {
+  margin-left: 40px;
+}
+.menu li a {
+  font-size: 1.3rem;
+  color: #090300;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+.menu li a:hover, .menu li a:focus {
+  color: #e74700;
+}
+.menu .disabled {
+  cursor: not-allowed;
+}
+@media (max-width: 640px) {
+  .menu {
+    background-color: whitesmoke;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.2s;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    color: #090300 !important;
+  }
+}
+
+.menu-open {
+  left: 0;
+}
+
+.box {
+  background-color: yellow;
+  width: 270px;
+  height: 320px;
+  display: block;
+  margin-left: 20px;
+}
+
+.box1 {
+  background-image: url("/images/bond vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box2 {
+  background-image: url("/images/transformers vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box3 {
+  background-image: url("/images/once upon vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box4 {
+  background-image: url("/images/batman vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box5 {
+  background-image: url("/images/zombieland vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box6 {
+  background-image: url("/images/rush vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box7 {
+  background-image: url("/images/warcraft vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box8 {
+  background-image: url("/images/toy story vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box9 {
+  background-image: url("/images/guardians vertical.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  background-color: rgba(231, 73, 5, 0.7);
+  color: whitesmoke;
+  position: absolute;
+  max-width: 500px;
+  padding: 30px;
+  bottom: 10%;
+  opacity: 0;
+}
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transition: all 0.7s ease-in 0.3s;
+}
+@media (max-width: 600px) {
+  .slide.current .content {
+    bottom: 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.form .contact-form-input, .form textarea {
+  padding: 12px 3px;
+  font-size: 1rem;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e74700;
+  background-color: transparent;
+}
+.form .contact-form-input::placeholder, .form textarea::placeholder {
+  font-family: "Arimo", sans-serif;
+}
+.form .button-transparent {
+  margin-top: 20px;
+  border: 1px solid #e74700;
+  border-radius: 8.5px;
+  width: 100px;
+  padding: 10px 0;
+  display: grid;
+  place-content: center;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  color: #090300;
+  transition: all 0.1s ease-in;
+}
+.form .button-transparent:hover {
+  background-color: #e74700;
+  color: whitesmoke;
+}
+
+.ghost-div {
+  width: 100%;
+  height: 1px;
+}
+
+.hamburger {
+  padding: 20px;
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+.hamburger .ham {
+  background-color: #e74700;
+  width: 30px;
+  height: 3px;
+  transition: 0.5s;
+  border-radius: 12px;
+}
+.hamburger .ham::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #e74700;
+  top: 9px;
+  transition: 0.3s;
+  border-radius: 12px;
+}
+.hamburger .ham::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #e74700;
+  bottom: 9px;
+  transition: 0.3s;
+  border-radius: 12px;
+}
+@media (max-width: 640px) {
+  .hamburger {
+    display: block;
+  }
+}
+.hamburger .exex {
+  background-color: transparent;
+}
+.hamburger .exex::before {
+  transform: rotate(405deg);
+  top: 46%;
+}
+.hamburger .exex::after {
+  transform: rotate(-405deg);
+  top: 46%;
+}
+
+/*# sourceMappingURL=app.css.map */

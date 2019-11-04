@@ -1,0 +1,21 @@
+.contact-form{
+    // background-color: pink;
+    margin-top: 70px;
+
+    .contact-form-content{
+        // border: 1px solid red;
+
+        .contact-form-text{
+            padding: 20px 0;
+            h2{
+                font-size: 3rem;
+            }
+
+            p{
+                max-width: 50%;
+                font-size: .93rem;
+                color: $gray;
+            }
+        }
+    }
+}

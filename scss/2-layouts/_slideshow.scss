@@ -1,0 +1,81 @@
+.slideshow{
+    // background-color: pink;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    // padding: 10px;
+    
+    
+    .slider{
+        // border: 2px solid red;
+        height: 100%;
+        width: 100%;
+
+        
+        .slide{
+            // background-color: red;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity .5s ease-in;
+    
+            &.current{
+                opacity: 1;
+                // border: 1px solid green;
+            }
+    
+            &:first-child{
+                background: url('../images/once upon horizontal.jpg') no-repeat center center/cover;
+            }
+    
+            &:nth-child(2){
+                background: url('../images/batman horizontal.jpg') no-repeat center center/cover;
+            }
+            
+            &:nth-child(3){
+                background: url('../images/toy story horizontal.jpg') no-repeat center center/cover;
+            }
+            
+            &:nth-child(4){
+                background: url('../images/transformers horizontal.jpg') no-repeat center center/cover;
+            }
+            
+            &:nth-child(5){
+                background: url('../images/avengers horizontal.jpg') no-repeat center center/cover;
+            }
+
+        }
+    }
+
+    .buttons{
+
+        .button{
+            background-color: transparent;
+            padding: 15px;
+            color: $white;
+            border: 1px solid $white;
+            transition: all .3s ease-in;
+
+            &:hover{
+                border-radius: 7px;
+            }
+        }
+
+        #prev{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 45px;
+            transform: translateX(-50%);
+        }
+
+        #next{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translateX(-50%);
+        }
+    }
+}
